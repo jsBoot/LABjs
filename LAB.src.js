@@ -30,7 +30,7 @@
 /*!END_DEBUG*/
 
 	// feature sniffs (yay!)
-	var testScriptElem = document.createElement("script"),
+	var testScriptElem = document.createElement("script");
 	var realPreloading;
 
 	// http://wiki.whatwg.org/wiki/Dynamic_Script_Execution_Order
