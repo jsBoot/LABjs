@@ -190,6 +190,7 @@
 			},
 			runQueue: function runQueue(){
 				var $L = instanceAPI;
+				var val;
 				while (queue.length > 0) {
 					val = queue.shift();
 					$L = $L[val.type].apply(null,val.args);
