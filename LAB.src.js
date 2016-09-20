@@ -322,7 +322,7 @@
 			// API for $LAB chains
 			chainedAPI = {
 				script: script,
-				wait: wait,
+				wait: wait
 			};
 
 			// the first chain link API (includes `setOptions` only this first time)
