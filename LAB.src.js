@@ -144,7 +144,6 @@
 		var globalDefaults = {};
 		var queue = [];
 		var registry = {};
-		var instanceAPI;
 
 		// global defaults
 		globalDefaults[keyAlwaysPreserveOrder] = false;
@@ -153,9 +152,8 @@
 		/*!START_DEBUG*/globalDefaults[debugMode] = false;/*!END_DEBUG*/
 		globalDefaults[keyBasePath] = "";
 
-
 		// API for each initial $LAB instance (before chaining starts)
-		instanceAPI = {
+		var instanceAPI = {
 			// main API functions
 			setGlobalDefaults: function setGlobalDefaults(opts){
 				mergeObjs(opts,globalDefaults);
