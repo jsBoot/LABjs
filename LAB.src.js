@@ -74,6 +74,19 @@
 			);
 	}
 
+	// does the chain group have any ready-to-execute scripts?
+	function checkChainGroupScriptsReady(chainGroup) {
+		var anyScriptsReady = false;
+		for (var i = 0; i < chainGroup.scripts.length; i++) {
+			if (chainGroup.scripts[i].ready && chainGroup.scripts[i].exec_trigger) {
+				anyScriptsReady = true;
+				chainGroup.scripts[i].exec_trigger();
+				chainGroup.scripts[i].exec_trigger = null;
+			}
+		}
+		return anyScriptsReady;
+	}
+
 	// merge `source` into `target`
 	function mergeObjs(source,target) {
 		for (var k in source) {
